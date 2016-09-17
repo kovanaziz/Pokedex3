@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -52,14 +52,11 @@
                                     <constraint firstItem="L16-5E-GwM" firstAttribute="centerX" secondItem="RA5-k2-Bxa" secondAttribute="centerX" id="nQI-fB-no1"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="hBP-6Y-gg6">
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search Pokemon ..." translatesAutoresizingMaskIntoConstraints="NO" id="hBP-6Y-gg6">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="O4Z-6e-kkj"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ki8-nf-Od5"/>
-                                </connections>
                             </searchBar>
                             <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="A4f-I5-YqZ"/>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gQa-zA-xiC">
@@ -129,22 +126,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SearchBar" destination="hBP-6Y-gg6" id="vTd-Vh-25S"/>
                         <outlet property="collection" destination="gQa-zA-xiC" id="Odf-7s-Wh6"/>
-                        <outlet property="searchDisplayController" destination="yPA-ic-C72" id="JrE-M4-PWd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="yPA-ic-C72">
                     <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="S2L-Wp-amw"/>
                         <outlet property="searchBar" destination="hBP-6Y-gg6" id="MwF-cb-jXq"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="n9c-29-Gr5"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="Nh9-wb-9LI"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="LN6-fL-Lrh"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="152.80000000000001" y="149.77511244377811"/>
+            <point key="canvasLocation" x="146" y="89"/>
         </scene>
     </scenes>
     <resources>
