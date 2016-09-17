@@ -128,6 +128,7 @@
                     <connections>
                         <outlet property="SearchBar" destination="hBP-6Y-gg6" id="vTd-Vh-25S"/>
                         <outlet property="collection" destination="gQa-zA-xiC" id="Odf-7s-Wh6"/>
+                        <segue destination="Z7e-y8-SZn" kind="show" identifier="PokemonDetailVC" id="rDf-Ef-DYq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -138,6 +139,51 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="146" y="89"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="m9U-vH-uZT">
+            <objects>
+                <viewController id="Z7e-y8-SZn" customClass="PokemonDetailVC" customModule="Pokedex3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3U8-1g-Pt9"/>
+                        <viewControllerLayoutGuide type="bottom" id="zYQ-iW-sPR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h0K-dx-YWY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylI-0Z-wxC">
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="7mM-6S-w7b"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7N-xc-iWM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="gFD-Va-Qhc"/>
+                                    <constraint firstAttribute="height" constant="30" id="uUW-Rm-u2k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ylI-0Z-wxC" secondAttribute="trailing" id="4HT-xN-2GR"/>
+                            <constraint firstItem="ylI-0Z-wxC" firstAttribute="top" secondItem="h0K-dx-YWY" secondAttribute="top" id="Dm7-9D-TxI"/>
+                            <constraint firstItem="ylI-0Z-wxC" firstAttribute="leading" secondItem="h0K-dx-YWY" secondAttribute="leading" id="lPX-nA-9Jf"/>
+                            <constraint firstItem="B7N-xc-iWM" firstAttribute="centerY" secondItem="h0K-dx-YWY" secondAttribute="centerY" id="nnn-Do-13n"/>
+                            <constraint firstItem="B7N-xc-iWM" firstAttribute="centerX" secondItem="h0K-dx-YWY" secondAttribute="centerX" id="omQ-Iy-vup"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLbl" destination="B7N-xc-iWM" id="PMx-Mx-Khw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YII-t9-XKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="89.505247376311857"/>
         </scene>
     </scenes>
     <resources>
