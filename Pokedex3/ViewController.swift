@@ -137,7 +137,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        view.endEditing(true) // remove keyboard after searching
+         view.endEditing(true) // remove keyboard after searching
     }
     
     
