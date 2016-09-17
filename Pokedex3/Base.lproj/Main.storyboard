@@ -163,18 +163,30 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qk-fS-Hgt">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="VoF-uv-hct"/>
+                                            <constraint firstAttribute="width" constant="39" id="gW4-Y8-A8n"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="Z7e-y8-SZn" eventType="touchUpInside" id="5Tw-qU-nNo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4qk-fS-Hgt" secondAttribute="bottom" constant="8" id="162-jf-3l5"/>
                                     <constraint firstAttribute="trailing" secondItem="B7N-xc-iWM" secondAttribute="trailing" id="3mM-OM-L7v"/>
                                     <constraint firstAttribute="height" constant="65" id="7mM-6S-w7b"/>
                                     <constraint firstAttribute="bottom" secondItem="B7N-xc-iWM" secondAttribute="bottom" constant="8" id="A7V-Sh-bA4"/>
+                                    <constraint firstItem="4qk-fS-Hgt" firstAttribute="leading" secondItem="ylI-0Z-wxC" secondAttribute="leading" constant="8" id="DGt-vD-Cvs"/>
                                     <constraint firstItem="B7N-xc-iWM" firstAttribute="leading" secondItem="ylI-0Z-wxC" secondAttribute="leading" id="raG-g3-78V"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-62-xKa" userLabel="outter Stack">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wXi-uV-IEp" userLabel="Up Stack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wXi-uV-IEp" userLabel="Up Stack">
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="Wfs-AS-Brg">
                                                 <constraints>
@@ -373,16 +385,28 @@
                             <constraint firstItem="mjZ-SA-3DD" firstAttribute="leading" secondItem="h0K-dx-YWY" secondAttribute="leading" id="CtT-xf-RMf"/>
                             <constraint firstItem="ylI-0Z-wxC" firstAttribute="top" secondItem="h0K-dx-YWY" secondAttribute="top" id="Dm7-9D-TxI"/>
                             <constraint firstItem="Bwk-Iq-OKj" firstAttribute="centerX" secondItem="h0K-dx-YWY" secondAttribute="centerX" id="EPy-P1-1kD"/>
-                            <constraint firstItem="Bwk-Iq-OKj" firstAttribute="top" secondItem="mjZ-SA-3DD" secondAttribute="bottom" constant="50" id="Ug1-4h-NR8"/>
+                            <constraint firstItem="Bwk-Iq-OKj" firstAttribute="top" secondItem="mjZ-SA-3DD" secondAttribute="bottom" constant="20" id="Ug1-4h-NR8"/>
                             <constraint firstItem="7Vh-62-xKa" firstAttribute="top" secondItem="ylI-0Z-wxC" secondAttribute="bottom" constant="20" id="fgZ-fM-lWZ"/>
-                            <constraint firstItem="zYQ-iW-sPR" firstAttribute="top" secondItem="Bwk-Iq-OKj" secondAttribute="bottom" constant="50" id="hbD-be-eW2"/>
+                            <constraint firstItem="zYQ-iW-sPR" firstAttribute="top" secondItem="Bwk-Iq-OKj" secondAttribute="bottom" constant="20" id="hbD-be-eW2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Vh-62-xKa" secondAttribute="trailing" id="hbr-Gc-cMU"/>
                             <constraint firstItem="7Vh-62-xKa" firstAttribute="leading" secondItem="h0K-dx-YWY" secondAttribute="leadingMargin" id="i6u-bX-D3q"/>
                             <constraint firstItem="ylI-0Z-wxC" firstAttribute="leading" secondItem="h0K-dx-YWY" secondAttribute="leading" id="lPX-nA-9Jf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backLbl" destination="4qk-fS-Hgt" id="f4N-8y-8WH"/>
+                        <outlet property="baseAtackLbl" destination="VxS-sI-eDR" id="FVG-xy-7JJ"/>
+                        <outlet property="currentEvoImg" destination="CKJ-RV-g3h" id="jBm-TF-ViI"/>
+                        <outlet property="defenseLbl" destination="2yr-gQ-OOJ" id="bGl-NQ-Ijx"/>
+                        <outlet property="descriptoinLbl" destination="SJk-Ol-Wk8" id="Td8-LO-ZO6"/>
+                        <outlet property="evoLbl" destination="wcN-DO-Eqk" id="LmN-Qn-gGS"/>
+                        <outlet property="heightLbl" destination="wP5-sc-jbP" id="Nnq-FO-VAw"/>
+                        <outlet property="mainImg" destination="Wfs-AS-Brg" id="Wc8-4j-K9S"/>
                         <outlet property="nameLbl" destination="B7N-xc-iWM" id="PMx-Mx-Khw"/>
+                        <outlet property="nextEvoImg" destination="83H-3r-jzf" id="wGR-OY-mtE"/>
+                        <outlet property="pokedexIdLbl" destination="PHu-5K-iQd" id="kZ3-Hj-8pI"/>
+                        <outlet property="typeLbl" destination="uxw-rs-sXQ" id="4A0-lW-YdA"/>
+                        <outlet property="weightLbl" destination="CK8-lk-z2F" id="SR9-ot-7Jm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YII-t9-XKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -395,6 +419,7 @@
         <image name="106" width="120" height="120"/>
         <image name="150" width="120" height="120"/>
         <image name="4" width="120" height="120"/>
+        <image name="back" width="100" height="67"/>
         <image name="bg1" width="183" height="275"/>
         <image name="music" width="100" height="100"/>
     </resources>
