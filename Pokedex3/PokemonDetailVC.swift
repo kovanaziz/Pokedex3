@@ -34,8 +34,8 @@ class PokemonDetailVC: UIViewController {
         mainImg.image = UIImage(named: "\(pokemon.pokedexID)")
         currentEvoImg.image = mainImg.image
         pokemon.downloadPokemonDetails {
-            print("Did we  Arived Here!!!!!")
-        //whatever we write will only be called afte the network call is complete.
+           
+         //whatever we write will only be called afte the network call is complete.
             self.updateUI()
             
         }
@@ -48,6 +48,7 @@ class PokemonDetailVC: UIViewController {
     
     func updateUI(){
         
+        print("this next level : \( self.pokemon.nextEvolutionLevel )")
         baseAtackLbl.text = pokemon.attack
         defenseLbl.text = pokemon.defense
         heightLbl.text = pokemon.height
